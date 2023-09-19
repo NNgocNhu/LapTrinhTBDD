@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="mark">Mark MBI:</p>
+    <P id="john">John BMI:</P>
+    <p id="whoIsHigher">Mark has a higher BMI than John: </p>
+</body>
+<script>
+    var mark = document.getElementById('mark').firstChild;
+    var john = document.getElementById('john').firstChild;
+    var markText = mark.textContent;
+    var johnText = john.textContent;
+    var markMass = 78;
+    var johnMass = 92;
+    var markHeight = 1.69;
+    var johnHeight = 1.95;
+    var markBMI1 = markMass / (markHeight * markHeight);
+    var johnBMI1 = johnMass / (johnHeight * johnHeight);
+    var whoIsHigher = document.getElementById('whoIsHigher').firstChild;
+    var whoIsHigherText = whoIsHigher.textContent;
+    mark.textContent = markText.replace(markText, markText + markBMI1);
+    john.textContent = johnText.replace(johnText, johnText + johnBMI1);
+    var compare = markBMI1 >= johnBMI1;
+    whoIsHigher.textContent = whoIsHigherText.replace(whoIsHigherText, whoIsHigherText + '' + compare);
+</script>
+
+</html>
