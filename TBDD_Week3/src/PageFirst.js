@@ -1,28 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, button } from 'react-native';
 
-export default function App() {
+function PageFirst() {
   return (
     <View style={styles.container}>
       <Image style={styles.image}
-        source={require('./assets/lock-1528791.png')}
+        source={require('./assets/Ellipse1.png')}
       />
       <Text style={styles.text1}>
-        FORGET <br />
-        PASSWORD
+        GROW
+        <br />
+        YOUR BUSINESS
       </Text>
       <Text style={styles.text2}>
-        Provide your account’s email for which  <br />
-        want to reset your password
+        We will help you to grow your business using
+        <br />
+        online server
       </Text>
-      <View style={styles.boxE}>
-        <Image style={styles.imageEmail}
-          source={require('./assets/mail-2935365.png')}
-        />
-        <Text style={styles.textEmail}>Email</Text>
+      <View style={styles.buttonsContainer}>
+        <button style={styles.button}> <text style={styles.ButtonText}>LOGIN</text></button>
+        <button style={styles.button}> <text style={styles.ButtonText}>SIGN UP</text></button>
       </View>
-      <button style={styles.button}> <text style={styles.ButtonText}>NEXT</text></button>
-
     </View>
   );
 };
@@ -32,12 +30,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    backgroundImage: 'linear-gradient(180deg, #C7F4F7 0.03%, #D1F4F6 30.21%, #E5F4F5 85.42%, #00CCF9 100%)',
+    backgroundImage: 'linear-gradient(180deg, #00CCF9 0%, #00CCF9 100%)',
 
   },
   image: {
-    width: '105px',
-    height: '117px',
+    width: '142px',
+    height: '142px',
     position: 'absolute',
     top: '15%',
 
@@ -45,7 +43,6 @@ const styles = StyleSheet.create({
   },
 
   text1: {
-    top: '40%',
     height: '58px',
     color: '#000',
     fontFamily: 'Helvetica',
@@ -64,37 +61,24 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     letterSpacing: 0,
     lineHeight: 'normal',
-    top: '53%',
+    top: '460px',
     position: 'absolute',
     textAlign: 'center',
   },
-  boxE: {
-    position: 'absolute',
-    top: '62%',
-    height: '45px',
-    width: '305px',
-    backgroundColor: '#C4C4C4',
-  },
-  imageEmail: {
-    height: '45px',
-    width: '48px',
-  },
-  textEmail: {
-    position: "absolute",
-    left: '50px',
-    top: '12px',
-    fontSize: '15px',
-    fontWeight: '400',
+  buttonsContainer: {
+    top: '35%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   button: {
-    position: 'absolute',
-    top: '75%',
     height: '45px',
-    width: '305px',
+    width: '125px',
     backgroundColor: '#e3c000',
     alignItems: 'center',
     justifyContent: 'center',
     border: 0,
+    borderRadius: '10px',
+    margin: '10px',
   },
   ButtonText: {
     fontSize: '18px',
@@ -106,7 +90,18 @@ const styles = StyleSheet.create({
     textAlign: 'center',
 
   },
+  text3: {
+    top: '30%',
+    fontSize: '18px',
+    color: '#000',
+    fontFamily: 'Helvetica',
+    fontWeight: '700',
+    letterSpacing: 0,
+    lineHeight: 'normal',
+    textAlign: 'center',
+  }
 });
+export default PageFirst;
 
 
 

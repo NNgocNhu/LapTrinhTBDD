@@ -1,26 +1,28 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
-export default function App() {
+import { StyleSheet, Text, View, Image, button } from 'react-native';
+function Page1a() {
   return (
     <View style={styles.container}>
-      <Text style={styles.CODE}>CODE</Text>
+      <Image style={styles.image}
+        source={require('../assets/Ellipse1.png')}
+      />
       <Text style={styles.text1}>
-        VERIFICATION
+        GROW
+        <br />
+        YOUR BUSINESS
       </Text>
       <Text style={styles.text2}>
-        Enter ontime password sent on <br />
-        ++849092605798
+        We will help you to grow your business using
+        <br />
+        online server
       </Text>
-      <View style={styles.rectangle}>
-        <input style={styles.rectangle1}></input>
-        <input style={styles.rectangle1}></input>
-        <input style={styles.rectangle1}></input>
-        <input style={styles.rectangle1}></input>
-        <input style={styles.rectangle1}></input>
-        <input style={styles.rectangle1}></input>
+      <View style={styles.buttonsContainer}>
+        <button style={styles.button}> <text style={styles.ButtonText}>SIGN IN</text></button>
+        <button style={styles.button}> <text style={styles.ButtonText}>SIGN UP</text></button>
       </View>
-      <button style={styles.button}> <text style={styles.ButtonText}>VERIFY CODE</text></button>
-
+      <Text style={styles.text3}>
+        HOW WE WORK?
+      </Text>
     </View>
   );
 };
@@ -33,29 +35,20 @@ const styles = StyleSheet.create({
     backgroundImage: 'linear-gradient(180deg, #C7F4F7 0.03%, #D1F4F6 30.21%, #E5F4F5 85.42%, #00CCF9 100%)',
 
   },
-  CODE: {
-    width: '180px',
-    height: '70px',
+  image: {
+    width: '142px',
+    height: '142px',
     position: 'absolute',
     top: '15%',
-    color: '#000',
-    fontFamily: 'Helvetica',
-    fontSize: '60px',
-    fontWeight: '700',
-    letterSpacing: 0,
-    lineHeight: 'normal',
-    textAlign: 'center',
 
 
   },
 
   text1: {
-    top: '40%',
-    height: '53px',
-    width: '302px',
+    height: '58px',
     color: '#000',
     fontFamily: 'Helvetica',
-    fontSize: '20px',
+    fontSize: '25px',
     fontWeight: '700',
     letterSpacing: 0,
     lineHeight: 'normal',
@@ -63,40 +56,30 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   text2: {
-    height: '53px',
-    width: '302px',
+    height: '36px',
     color: '#000',
     fontFamily: 'Helvetica',
     fontSize: '15px',
     fontWeight: '700',
     letterSpacing: 0,
     lineHeight: 'normal',
-    top: '48%',
+    top: '410px',
     position: 'absolute',
     textAlign: 'center',
   },
-
-  rectangle: {
-    top: '60%',
-    position: 'absolute',
+  buttonsContainer: {
+    top: '25%',
     flexDirection: 'row',
+    justifyContent: 'space-between',
   },
-  rectangle1: {
-    width: 50,
-    height: 50,
-    border: '1 Solid',
-    borderColor: '#000',
-  },
-
   button: {
-    position: 'absolute',
-    top: '75%',
     height: '45px',
-    width: '305px',
+    width: '125px',
     backgroundColor: '#e3c000',
     alignItems: 'center',
     justifyContent: 'center',
     border: 0,
+    margin: '10px',
   },
   ButtonText: {
     fontSize: '18px',
@@ -108,7 +91,17 @@ const styles = StyleSheet.create({
     textAlign: 'center',
 
   },
+  text3: {
+    top: '30%',
+    fontSize: '18px',
+    color: '#000',
+    fontFamily: 'Helvetica',
+    fontWeight: '700',
+    letterSpacing: 0,
+    lineHeight: 'normal',
+    textAlign: 'center',
+  }
 });
-
+export default Page1a;
 
 
