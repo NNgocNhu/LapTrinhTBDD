@@ -3,30 +3,17 @@ import { StyleSheet, Text, View, TextInput } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.CODE}>CODE</Text>
-      <Text style={styles.text1}>
-        VERIFICATION
-      </Text>
-      <Text style={styles.text2}>
-        Enter ontime password sent on <br />
-        ++849092605798
-      </Text>
-      <TextInput
-        keyboardType='numeric'
-        value={number}
-        style={styles.input}
-        maxLength={10}
-      />
-      {/* <View style={styles.rootStyle}>
-        <Cell style={styles.cell}></Cell>
-        <Cell style={styles.cell}></Cell>
-        <Cell style={styles.cell}></Cell>
-        <Cell style={styles.cell}></Cell>
-        <Cell style={styles.cell}></Cell>
-        <Cell style={styles.cell}></Cell>
-      </View> */}
-      <button style={styles.button}> <text style={styles.ButtonText}>VERIFY CODE</text></button>
-
+      <Text style={styles.login}>LOGIN</Text>
+      <input style={styles.boxE}>
+        <Text style={styles.textEmail}>Email</Text>
+      </input>
+      <input style={styles.boxP}>
+        <Text style={styles.textPass}>Password</Text>
+        <Image style={styles.imageEye}
+          source={require('./assets/eye1.png')}
+        />
+      </input>
+      <button style={styles.button}> <text style={styles.ButtonText}>LOGIN</text></button>
     </View>
   );
 };
@@ -36,102 +23,72 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    backgroundImage: 'linear-gradient(180deg, #C7F4F7 0.03%, #D1F4F6 30.21%, #E5F4F5 85.42%, #00CCF9 100%)',
+    backgroundImage: '#30aa5130',
 
   },
-  CODE: {
-    width: '200px',
-    height: '70px',
+  login: {
+    width: '73px',
+    height: '29px',
     position: 'absolute',
     top: '15%',
     color: '#000',
     fontFamily: 'Helvetica',
-    fontSize: '60px',
+    fontSize: '25px',
     fontWeight: '700',
     letterSpacing: 0,
     lineHeight: 'normal',
     textAlign: 'center',
-
-
   },
-
-  text1: {
-    top: '40%',
-    height: '53px',
-    width: '302px',
-    color: '#000',
-    fontFamily: 'Helvetica',
-    fontSize: '20px',
-    fontWeight: '700',
-    letterSpacing: 0,
-    lineHeight: 'normal',
+  boxE: {
     position: 'absolute',
-    textAlign: 'center',
-  },
-  text2: {
-    height: '53px',
-    width: '302px',
-    color: '#000',
-    fontFamily: 'Helvetica',
-    fontSize: '15px',
-    fontWeight: '700',
-    letterSpacing: 0,
-    lineHeight: 'normal',
-    top: '53%',
-    position: 'absolute',
-    textAlign: 'center',
-  },
-  input: {
-    borderWidth: 1,
-    width: '80%',
-    borderColor: '#c7c3c3',
-    padding: 10,
-  },
-  rootStyle: {
-    position: 'absolute',
-    flex: 1, padding: 20
-  },
-  cell: {
-    width: 40,
-    height: 40,
-    lineHeight: 38,
-    fontSize: 24,
-    borderWidth: 2,
-    borderColor: '#00000030',
-    textAlign: 'center',
-  },
-  imageEmail: {
+    top: '30%',
     height: '45px',
-    width: '48px',
+    width: '305px',
+    backgroundColor: '#C4C4C4',
   },
   textEmail: {
     position: "absolute",
-    left: '50px',
+    left: '15px',
     top: '12px',
     fontSize: '15px',
     fontWeight: '400',
   },
-  button: {
+  boxP: {
     position: 'absolute',
-    top: '75%',
+    top: '40%',
     height: '45px',
     width: '305px',
-    backgroundColor: '#e3c000',
+    backgroundColor: '#C4C4C4',
+  },
+  textPass: {
+    position: "absolute",
+    left: '15px',
+    top: '12px',
+    fontSize: '15px',
+    fontWeight: '400',
+  },
+  imageEye: {
+    left: 250,
+    width: 38,
+    height: 25,
+    right: 0,
+  },
+  button: {
+    position: 'absolute',
+    top: '55%',
+    height: '45px',
+    width: '305px',
+    backgroundColor: '#e53935',
     alignItems: 'center',
     justifyContent: 'center',
     border: 0,
   },
   ButtonText: {
     fontSize: '18px',
-    color: '#000',
+    color: '#fff',
     fontFamily: 'Helvetica',
     fontWeight: '700',
     letterSpacing: 0,
-    lineHeight: 'normal',
     textAlign: 'center',
-
-  },
+  }
 });
-
-
-
