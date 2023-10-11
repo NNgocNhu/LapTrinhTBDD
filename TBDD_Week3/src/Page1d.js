@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 function Page1d() {
   return (
     <View style={styles.container}>
@@ -13,7 +13,7 @@ function Page1d() {
           source={require('../assets/eye1.png')}
         />
       </input>
-      <button style={styles.button}> <text style={styles.buttonText}>LOGIN</text></button>
+      <Button style={styles.Button}> <text style={styles.ButtonText}>LOGIN</text></Button>
     </View>
   );
 };
@@ -71,9 +71,9 @@ const styles = StyleSheet.create({
     height: 25,
     right: 0,
   },
-  button: {
-    position: 'absolute',
-    top: '55%',
+  Button: {
+    // position: 'absolute',
+    // top: '55%',
     height: '45px',
     width: '305px',
     backgroundColor: '#e53935',
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     border: 0,
   },
-  buttonText: {
+  ButtonText: {
     fontSize: '18px',
     color: '#fff',
     fontFamily: 'Helvetica',

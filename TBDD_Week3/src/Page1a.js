@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, button } from 'react-native';
+import { StyleSheet, Text, View, Image, Button } from 'react-native';
 function Page1a() {
   return (
     <View style={styles.container}>
@@ -16,9 +16,9 @@ function Page1a() {
         <br />
         online server
       </Text>
-      <View style={styles.buttonsContainer}>
-        <button style={styles.button}> <text style={styles.ButtonText}>SIGN IN</text></button>
-        <button style={styles.button}> <text style={styles.ButtonText}>SIGN UP</text></button>
+      <View style={styles.ButtonsContainer}>
+        <Button style={styles.Button}> <text style={styles.ButtonText}>SIGN IN</text></Button>
+        <Button style={styles.Button}> <text style={styles.ButtonText}>SIGN UP</text></Button>
       </View>
       <Text style={styles.text3}>
         HOW WE WORK?
@@ -67,12 +67,12 @@ const styles = StyleSheet.create({
     position: 'absolute',
     textAlign: 'center',
   },
-  buttonsContainer: {
+  ButtonsContainer: {
     top: '25%',
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  button: {
+  Button: {
     height: '45px',
     width: '125px',
     backgroundColor: '#e3c000',

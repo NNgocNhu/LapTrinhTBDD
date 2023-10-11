@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 function Page1c() {
   return (
     <View style={styles.container}>
@@ -19,7 +19,7 @@ function Page1c() {
         <input style={styles.rectangle1}></input>
         <input style={styles.rectangle1}></input>
       </View>
-      <button style={styles.button}> <text style={styles.ButtonText}>VERIFY CODE</text></button>
+      <Button style={styles.Button}> <text style={styles.ButtonText}>VERIFY CODE</text></Button>
 
     </View>
   );
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     borderColor: '#000',
   },
 
-  button: {
+  Button: {
     position: 'absolute',
     top: '75%',
     height: '45px',

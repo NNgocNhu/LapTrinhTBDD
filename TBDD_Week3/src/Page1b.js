@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, button } from 'react-native';
+import { StyleSheet, Text, View, Image, Button } from 'react-native';
 
 function Page1b() {
   return (
@@ -21,7 +21,7 @@ function Page1b() {
         />
         <Text style={styles.textEmail}>Email</Text>
       </View>
-      <button style={styles.button}> <text style={styles.ButtonText}>NEXT</text></button>
+      <Button style={styles.Button}> <text style={styles.ButtonText}>NEXT</text></Button>
 
     </View>
   );
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     fontSize: '15px',
     fontWeight: '400',
   },
-  button: {
+  Button: {
     position: 'absolute',
     top: '75%',
     height: '45px',
