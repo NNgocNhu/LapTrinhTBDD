@@ -5,8 +5,8 @@ import Page1d from './src/Page1d.js';
 export default function App() {
   return (
     // <Page1a />
-    <Page1b />
+    // <Page1b />
     // <Page1c />
-    // <Page1d />
+    <Page1d />
   );
 }
